@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Vm24qkEuuAIt71uKXKCpAJTgrB8MnPCEdyZLvu1RCgw=",
+  "Source": "CNF.API.Hosting",
+  "BasePath": "_content/CNF.API.Hosting",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
