@@ -1,5 +1,7 @@
 namespace CNF.API.Hosting
 {
+    using CNF.Share.Domain.Repository;
+    using CNF.Share.Infrastructure.Common;
     using NLog.Web;
     public class Program
     {
@@ -13,7 +15,10 @@ namespace CNF.API.Hosting
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            WebHelper.InjectAssembly(builder.Services, "CNF.Share.Domain");
+            builder.Services.AddHttpContextAccessor();
             Console.WriteLine(builder.Configuration["ConnectionStrings:MySql"]);
+            builder.Services.AddScoped(typeof(IBaseServer<>), typeof(BaseServer<>));
             builder.Logging.AddNLogWeb();
             var app = builder.Build();
 

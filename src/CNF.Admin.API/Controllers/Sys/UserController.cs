@@ -47,15 +47,20 @@ namespace CNF.Admin.API.Controllers.Sys
         /// <param name="cacheHelper"></param>
         /// <param name="currentUserContext"></param>
         /// <param name="hubContext"></param>
-        public UserController(IOptions<JwtSetting> jwtSetting, IUserService userService, IR_User_RoleService r_User_RoleService, /*IMenuService menuService,*/ ICacheHelper cacheHelper, ICurrentUserContext currentUserContext/*, IHubContext<ChatHub> hubContext*/)
+        //public UserController(IOptions<JwtSetting> jwtSetting, IUserService userService, IR_User_RoleService r_User_RoleService, /*IMenuService menuService,*/ ICacheHelper cacheHelper, ICurrentUserContext currentUserContext/*, IHubContext<ChatHub> hubContext*/)
+        //{
+        //    _jwtSetting = jwtSetting;
+        //    _userService = userService;
+        //    _r_User_RoleService = r_User_RoleService;
+        //    //_menuService = menuService;
+        //    _cacheHelper = cacheHelper;
+        //    _currentUserContext = currentUserContext;
+        //    //_hubContext = hubContext;
+        //}
+
+        public UserController(IUserService userService)
         {
-            _jwtSetting = jwtSetting;
-            _userService = userService;
-            _r_User_RoleService = r_User_RoleService;
-            //_menuService = menuService;
-            _cacheHelper = cacheHelper;
-            _currentUserContext = currentUserContext;
-            //_hubContext = hubContext;
+
         }
 
 
